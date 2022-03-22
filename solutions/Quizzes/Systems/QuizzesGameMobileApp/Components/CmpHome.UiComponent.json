@@ -1,0 +1,60 @@
+{
+  "eventsAndFunctions": [
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "Navigate",
+            "expressionStartModel": "{}",
+            "uiComponentName": "CmpStartGame"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": []
+      },
+      "name": "buttonCreateGame_click"
+    }
+  ],
+  "model": [],
+  "root": {
+    "children": [
+      {
+        "align": "center",
+        "bold": true,
+        "color": "default",
+        "cssClass": "blz-padding-top-large",
+        "name": "labelWelcome",
+        "size": "large",
+        "text": "Welcome to",
+        "widget": "Label"
+      },
+      {
+        "align": "center",
+        "bold": true,
+        "color": "primary",
+        "name": "labelQuizzesGame",
+        "size": "x-large",
+        "text": "Quizzes Game",
+        "widget": "Label"
+      },
+      {
+        "align": "center",
+        "color": "primary",
+        "cssClass": "blz-padding-top-large",
+        "name": "buttonCreateGame",
+        "size": "large",
+        "text": "CREATE NEW GAME",
+        "widget": "Button"
+      }
+    ],
+    "cssClass": "blz-padding-top-large blz-padding-right-large blz-padding-left-large blz-padding-bottom-large blz-area-main",
+    "horizontalSeparation": "large",
+    "layout": "container",
+    "verticalSeparation": "large"
+  },
+  "routing": {
+    "path": "/home"
+  },
+  "unused": []
+}

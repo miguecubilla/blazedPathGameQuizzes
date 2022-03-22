@@ -1,0 +1,159 @@
+{
+  "betweens": [],
+  "source": {
+    "elementType": "RdsTable",
+    "outputs": [
+      {
+        "codePath": "roundId",
+        "outputConnections": [
+          "c0"
+        ]
+      },
+      {
+        "codePath": "gameId",
+        "outputConnections": [
+          "c1"
+        ]
+      },
+      {
+        "codePath": "quizId",
+        "outputConnections": [
+          "c2"
+        ]
+      },
+      {
+        "codePath": "startTime",
+        "outputConnections": [
+          "c3"
+        ]
+      },
+      {
+        "codePath": "endTime",
+        "outputConnections": [
+          "c4"
+        ]
+      },
+      {
+        "codePath": "wasCorrect",
+        "outputConnections": [
+          "c5"
+        ]
+      },
+      {
+        "codePath": "quiz.quizId",
+        "outputConnections": [
+          "c6"
+        ]
+      },
+      {
+        "codePath": "quiz.topicId",
+        "outputConnections": [
+          "c7"
+        ]
+      },
+      {
+        "codePath": "quiz.question",
+        "outputConnections": [
+          "c8"
+        ]
+      },
+      {
+        "codePath": "quiz.answer1",
+        "outputConnections": [
+          "c9"
+        ]
+      },
+      {
+        "codePath": "quiz.answer2",
+        "outputConnections": [
+          "c10"
+        ]
+      },
+      {
+        "codePath": "quiz.answer3",
+        "outputConnections": [
+          "c11"
+        ]
+      },
+      {
+        "codePath": "quiz.answer4",
+        "outputConnections": [
+          "c12"
+        ]
+      },
+      {
+        "codePath": "quiz.correctAnswer",
+        "outputConnections": [
+          "c13"
+        ]
+      }
+    ],
+    "rdsTableName": "QuizzesDatabase.Round",
+    "x": 60,
+    "y": 60
+  },
+  "target": {
+    "elementType": "Type",
+    "inputs": [
+      {
+        "codePath": "roundId",
+        "inputConnection": "c0"
+      },
+      {
+        "codePath": "gameId",
+        "inputConnection": "c1"
+      },
+      {
+        "codePath": "quizId",
+        "inputConnection": "c2"
+      },
+      {
+        "codePath": "startTime",
+        "inputConnection": "c3"
+      },
+      {
+        "codePath": "endTime",
+        "inputConnection": "c4"
+      },
+      {
+        "codePath": "wasCorrect",
+        "inputConnection": "c5"
+      },
+      {
+        "codePath": "quiz.quizId",
+        "inputConnection": "c6"
+      },
+      {
+        "codePath": "quiz.topicId",
+        "inputConnection": "c7"
+      },
+      {
+        "codePath": "quiz.question",
+        "inputConnection": "c8"
+      },
+      {
+        "codePath": "quiz.answer1",
+        "inputConnection": "c9"
+      },
+      {
+        "codePath": "quiz.answer2",
+        "inputConnection": "c10"
+      },
+      {
+        "codePath": "quiz.answer3",
+        "inputConnection": "c11"
+      },
+      {
+        "codePath": "quiz.answer4",
+        "inputConnection": "c12"
+      },
+      {
+        "codePath": "quiz.correctAnswer",
+        "inputConnection": "c13"
+      }
+    ],
+    "typeName": "Round",
+    "x": 600,
+    "y": 60
+  }
+}

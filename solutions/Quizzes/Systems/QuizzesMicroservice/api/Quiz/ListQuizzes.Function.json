@@ -1,0 +1,68 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsListQuizzes"
+      }
+    ],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "Transform(\n\tTrfQuizWithTopic,    \n\tRdsSelectReader(\n    \tQuizzesDatabase.Quiz, \n        [\n        \tRdsConditional(\n            \tquizId == ^args.quizId, \n                !IsNull(^args.quizId)\n            ), \n            RdsConditional(\n            \ttopicId == ^args.topicId, \n                !IsNull(^args.topicId)\n            ),\n            RdsConditional( \n            \tRdsLike( topic.name, \"%\" + ^args.topicName + \"%\" ),\n                !IsNull( ^args.topicName )\n            ),\n            RdsConditional( \n            \tRdsLike( question, \"%\" + ^args.question + \"%\" ),\n                !IsNull( ^args.question )\n            ),\n            RdsConditional(\n            \tRdsLike( answer1, \"%\" + ^args.answer + \"%\" ) ||\n                RdsLike( answer2, \"%\" + ^args.answer + \"%\" ) ||\n                RdsLike( answer3, \"%\" + ^args.answer + \"%\" ) ||\n                RdsLike( answer4, \"%\" + ^args.answer + \"%\" ),\n                !IsNull( ^args.answer )\n            )\n         ], \n         RdsDesc( quizId ), \n         ^args.offset, \n         ^args.limit\n    )\n)"
+      }
+    ],
+    "typeReturn": "list(Quiz)",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.quizId",
+        "in": "Query",
+        "name": "quizId",
+        "remarks": "For filtering."
+      },
+      {
+        "bind": "args.topicId",
+        "in": "Query",
+        "name": "topicId",
+        "remarks": "For filtering."
+      },
+      {
+        "bind": "args.offset",
+        "in": "Query",
+        "name": "offset",
+        "remarks": "Requested index for start the results to be provided in response."
+      },
+      {
+        "bind": "args.limit",
+        "in": "Query",
+        "name": "limit",
+        "remarks": "Requested number results to be provided in response."
+      },
+      {
+        "bind": "args.topicName",
+        "in": "Query",
+        "name": "topicName",
+        "remarks": "Filter by topic name."
+      },
+      {
+        "bind": "args.question",
+        "in": "Query",
+        "name": "question",
+        "remarks": "Filter by question."
+      },
+      {
+        "bind": "args.answer",
+        "in": "Query",
+        "name": "answer",
+        "remarks": "Filter by answer."
+      }
+    ],
+    "path": "/quizzes",
+    "remarks": "Allows to get a list of Quizzes.",
+    "responses": []
+  }
+}

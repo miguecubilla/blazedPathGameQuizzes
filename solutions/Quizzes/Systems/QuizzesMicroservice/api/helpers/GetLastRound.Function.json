@@ -1,0 +1,19 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "gameId",
+        "type": "integer"
+      }
+    ],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "First( Transform( TrfRoundWithQuiz, RdsSelectReader( \n\tQuizzesDatabase.Round, \n    gameId == ^gameId, \n    RdsDesc( roundId ),\n    0,\n    1\n) ) )"
+      }
+    ],
+    "typeReturn": "Round",
+    "variables": []
+  },
+  "routing": null
+}

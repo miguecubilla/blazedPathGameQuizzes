@@ -1,0 +1,12 @@
+{
+  "blazedpath": {
+    "version": "2021.11.19"
+  },
+  "publishConfig": {
+    "registry": "https://packages.blazedpath.com/repository/blz-packages",
+    "username": "blz-company",
+    "password": "blazedpath"
+  },
+  "dependencies": {},
+  "version": "1.0.0"
+}

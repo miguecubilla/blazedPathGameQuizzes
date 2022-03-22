@@ -1,0 +1,62 @@
+{
+  "tableName": "GAME",
+  "sequenceName": "GAME_SQ",
+  "autoincrementalPrimaryKey": true,
+  "primaryKeyName": "GAME_PK",
+  "isView": false,
+  "columns": [
+    {
+      "name": "GAME_ID",
+      "alias": "gameId",
+      "type": "integer",
+      "primaryKey": true
+    },
+    {
+      "name": "TOPIC_ID",
+      "alias": "topicId",
+      "type": "integer"
+    },
+    {
+      "name": "PLAYER_NAME",
+      "alias": "playerName",
+      "type": "string"
+    },
+    {
+      "name": "START_TIME",
+      "alias": "startTime",
+      "type": "datetime"
+    },
+    {
+      "name": "END_TIME",
+      "alias": "endTime",
+      "type": "datetime",
+      "allowNull": true
+    },
+    {
+      "name": "SCORE",
+      "alias": "score",
+      "type": "integer"
+    },
+    {
+      "name": "TOTAL_TIME",
+      "alias": "totalTime",
+      "type": "integer",
+      "allowNull": true
+    }
+  ],
+  "foreignKeys": [
+    {
+      "name": "GAME_FK",
+      "alias": "topic",
+      "rdsTableName": "Topic",
+      "details": [
+        {
+          "columnName": "TOPIC_ID",
+          "relatedColumnName": "TOPIC_ID"
+        }
+      ]
+    }
+  ],
+  "uniqueKeys": [],
+  "indexes": []
+}
